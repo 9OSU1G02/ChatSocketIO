@@ -11,6 +11,10 @@
 		46E7D6A32AB5A48A00D0A333 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E7D6A22AB5A48A00D0A333 /* ContentView.swift */; };
 		46E7D6A52AB5A48B00D0A333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E7D6A42AB5A48B00D0A333 /* Assets.xcassets */; };
 		46E7D6A82AB5A48B00D0A333 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E7D6A72AB5A48B00D0A333 /* Preview Assets.xcassets */; };
+		46E7D6B02AB5A53600D0A333 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 46E7D6AF2AB5A53600D0A333 /* SocketIO */; };
+		46E7D6B22AB5A54D00D0A333 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E7D6B12AB5A54D00D0A333 /* Message.swift */; };
+		46E7D6B42AB5A62C00D0A333 /* ChatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E7D6B32AB5A62C00D0A333 /* ChatClient.swift */; };
+		46E7D6B62AB5B29A00D0A333 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E7D6B52AB5B29A00D0A333 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		46E7D6A22AB5A48A00D0A333 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46E7D6A42AB5A48B00D0A333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E7D6A72AB5A48B00D0A333 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		46E7D6B12AB5A54D00D0A333 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		46E7D6B32AB5A62C00D0A333 /* ChatClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClient.swift; sourceTree = "<group>"; };
+		46E7D6B52AB5B29A00D0A333 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E7D6B02AB5A53600D0A333 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,9 @@
 			children = (
 				46E7D6A02AB5A48A00D0A333 /* ChatSocketIOApp.swift */,
 				46E7D6A22AB5A48A00D0A333 /* ContentView.swift */,
+				46E7D6B52AB5B29A00D0A333 /* ChatView.swift */,
+				46E7D6B12AB5A54D00D0A333 /* Message.swift */,
+				46E7D6B32AB5A62C00D0A333 /* ChatClient.swift */,
 				46E7D6A42AB5A48B00D0A333 /* Assets.xcassets */,
 				46E7D6A62AB5A48B00D0A333 /* Preview Content */,
 			);
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = ChatSocketIO;
+			packageProductDependencies = (
+				46E7D6AF2AB5A53600D0A333 /* SocketIO */,
+			);
 			productName = ChatSocketIO;
 			productReference = 46E7D69D2AB5A48A00D0A333 /* ChatSocketIO.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 46E7D6942AB5A48A00D0A333;
+			packageReferences = (
+				46E7D6AE2AB5A53600D0A333 /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 46E7D69E2AB5A48A00D0A333 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E7D6B22AB5A54D00D0A333 /* Message.swift in Sources */,
 				46E7D6A32AB5A48A00D0A333 /* ContentView.swift in Sources */,
+				46E7D6B62AB5B29A00D0A333 /* ChatView.swift in Sources */,
+				46E7D6B42AB5A62C00D0A333 /* ChatClient.swift in Sources */,
 				46E7D6A12AB5A48A00D0A333 /* ChatSocketIOApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46E7D6AE2AB5A53600D0A333 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46E7D6AF2AB5A53600D0A333 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46E7D6AE2AB5A53600D0A333 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46E7D6952AB5A48A00D0A333 /* Project object */;
 }
